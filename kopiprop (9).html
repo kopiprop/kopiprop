@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KopiProp – Kopi Lokal, Kualitas Dunia</title>
+
+  <!-- Essential Meta Tags -->
+  <meta name="description" content="KopiProp – Kopi specialty dari kebun terbaik Jawa Barat & Temanggung. Robusta Temanggung, Arabica West Java, Dark Roast West Java. Free ongkir seluruh Indonesia." />
+  <meta name="keywords" content="kopi, kopiprop, kopi jawa barat, robusta temanggung, arabica west java, dark roast, kopi specialty, beli kopi online" />
+  <meta name="author" content="KopiProp" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kopiprop.id/" />
+  <meta property="og:title" content="KopiProp – Kopi Lokal, Kualitas Dunia" />
+  <meta property="og:description" content="Kopi specialty dari kebun terbaik Jawa Barat & Temanggung. Robusta, Arabica, Dark Roast – dikirim ke seluruh Indonesia." />
+  <meta property="og:image" content="https://kopiprop.id/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KopiProp – Kopi Lokal, Kualitas Dunia" />
+  <meta name="twitter:description" content="Kopi specialty dari kebun terbaik Jawa Barat & Temanggung." />
+  <meta name="twitter:image" content="https://kopiprop.id/og-image.jpg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://kopiprop.id/" />
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #c9922a;
+      --gold-light: #e0b04a;
+      --bg: #080705;
+      --bg2: #110f0c;
+      --bg3: #1a1612;
+      --border: #2a2520;
+      --text: #f0ede8;
+      --muted: #7a736a;
+      --wa: #25D366;
+      --tg: #229ED9;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,7,5,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+    }
+    .nav-brand {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--text);
+    }
+    .nav-brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,146,42,0.10) 0%, transparent 70%),
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(201,146,42,0.04) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(201,146,42,0.04) 40px);
+      z-index: 0;
+    }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.18;
+      z-index: 1;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--bg) 0%, rgba(8,7,5,0.3) 60%, transparent 100%);
+      z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      padding: 0 20px 60px;
+      width: 100%;
+      max-width: 600px;
+    }
+    .hero-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(64px, 18vw, 120px);
+      line-height: 0.88;
+      letter-spacing: -1px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .hero-title span { color: var(--gold); display: block; }
+    .hero-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 32px;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--gold);
+      color: #080705;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 16px 36px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      max-width: 320px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 15px 36px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      width: 100%;
+      max-width: 320px;
+      transition: border-color 0.2s, background 0.2s, transform 0.1s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-outline:active { transform: scale(0.98); }
+    .hero-badge {
+      position: absolute;
+      top: 24px;
+      left: 20px;
+      z-index: 4;
+      background: var(--gold);
+      color: #080705;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+    }
+
+    /* TICKER */
+    .ticker {
+      background: var(--gold);
+      color: #080705;
+      padding: 11px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-track {
+      display: inline-block;
+      animation: ticker-scroll 22s linear infinite;
+    }
+    .ticker-track:hover { animation-play-state: paused; }
+    @keyframes ticker-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-text {
+      display: inline;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+    .ticker-sep { margin: 0 20px; }
+
+    /* SECTION HELPERS */
+    .section-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 28px 20px 12px;
+    }
+    .divider { height: 1px; background: var(--border); }
+
+    /* ABOUT */
+    .about { padding: 8px 20px 28px; }
+    .about-headline {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(30px, 8vw, 48px);
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .about-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+    /* PRODUCTS */
+    .product-card {
+      border-bottom: 1px solid var(--border);
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: background 0.15s;
+    }
+    .product-card:hover { background: var(--bg2); }
+    .product-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+    .product-info { flex: 1; min-width: 0; }
+    .product-name {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .product-detail { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+    .product-price { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
+    .product-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-wa {
+      background: var(--wa);
+      color: #fff;
+      border: none;
+      padding: 9px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: opacity 0.15s, transform 0.1s;
+      white-space: nowrap;
+    }
+    .btn-wa:hover { opacity: 0.9; }
+    .btn-wa:active { transform: scale(0.97); }
+    .btn-lynk {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 9px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: border-color 0.15s, color 0.15s, transform 0.1s;
+      white-space: nowrap;
+    }
+    .btn-lynk:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-lynk:active { transform: scale(0.97); }
+
+    /* FEATURE GRID */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--border);
+    }
+    .feature-item {
+      padding: 24px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .feature-item:nth-child(odd) { border-right: 1px solid var(--border); }
+    .feature-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .feature-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .feature-desc { font-size: 12px; color: var(--muted); }
+
+    /* CTA HERO SECONDARY */
+    .cta-section {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(32px, 9vw, 56px);
+      line-height: 1;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .cta-section p { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+    .cta-btn-group { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+
+    /* COMMUNITY */
+    .community {
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .community h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: 1px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .community p { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+    .btn-telegram {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--tg);
+      color: #fff;
+      border: none;
+      padding: 15px 32px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      width: 100%;
+      max-width: 340px;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+    .btn-telegram:hover { opacity: 0.9; }
+    .btn-telegram:active { transform: scale(0.98); }
+
+    /* NEWSLETTER */
+    .newsletter {
+      background: var(--bg3);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 20px;
+      display: flex;
+      gap: 0;
+    }
+    .newsletter input {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-right: none;
+      color: var(--text);
+      padding: 12px 14px;
+      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      min-width: 0;
+    }
+    .newsletter input::placeholder { color: var(--muted); }
+    .newsletter input:focus { border-color: var(--gold); }
+    .newsletter button {
+      background: var(--gold);
+      color: #080705;
+      border: none;
+      padding: 12px 18px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .newsletter button:hover { background: var(--gold-light); }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 36px 20px 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+    .footer-col h3 {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      transition: color 0.15s;
+    }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom { text-align: center; border-top: 1px solid var(--border); padding-top: 24px; }
+    .footer-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 14vw, 96px);
+      letter-spacing: -2px;
+      color: var(--bg3);
+      line-height: 1;
+      user-select: none;
+    }
+    .footer-copy { font-size: 11px; color: var(--border); margin-top: 8px; }
+
+    /* SCROLL ANIMATIONS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE TWEAKS */
+    @media (max-width: 400px) {
+      .nav-links { display: none; }
+      .hero-cta-group { gap: 10px; }
+      .product-btns { gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand">KOPI<span>PROP</span></div>
+    <div class="nav-links">
+      <a href="#produk">Produk</a>
+      <a href="#komunitas">Komunitas</a>
+      <a href="#tentang">Tentang</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <img
+      class="hero-img"
+      src="Hachi.webp"
+      alt="Biji kopi specialty"
+      loading="lazy"
+      decoding="async"
+      fetchpriority="low"
+    />
+    <div class="hero-overlay"></div>
+    <div class="hero-badge">✦ New Arrival</div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">West Java — Temanggung — Specialty Coffee</div>
+      <h1 class="hero-title">
+        KOPI
+        <span>PROP</span>
+      </h1>
+      <p class="hero-sub">Dari kebun pilihan langsung ke cangkirmu. Robusta, Arabica, dan Dark Roast terbaik Nusantara.</p>
+      <div class="hero-cta-group">
+        <a href="#produk" class="btn-primary">☕ Pesan Sekarang</a>
+        <a href="https://lynk.id/kopiprop" target="_blank" rel="noopener noreferrer" class="btn-outline">⚡ Beli Instan di Lynk.id</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-text">Free Ongkir Seluruh Indonesia</span><span class="ticker-sep">✦</span>
+      <span class="ticker-text">Roasted Fresh Weekly</span><span class="ticker-sep">✦</span>
+      <span class="ticker-text">Single Origin Specialty</span><span class="ticker-sep">✦</span>
+      <span class="ticker-text">Kopi Nusantara Terbaik</span><span class="ticker-sep">✦</span>
+      <span class="ticker-text">Free Ongkir Seluruh Indonesia</span><span class="ticker-sep">✦</span>
+      <span class="ticker-text">Roasted Fresh Weekly</span><span class="ticker-sep">✦</span>
+      <span class="ticker-text">Single Origin Specialty</span><span class="ticker-sep">✦</span>
+      <span class="ticker-text">Kopi Nusantara Terbaik</span><span class="ticker-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="tentang">
+    <div class="section-tag">— Tentang Kami</div>
+    <div class="about reveal">
+      <h2 class="about-headline">Kopi Lokal,<br>Kualitas Dunia.</h2>
+      <p class="about-body">
+        KopiProp lahir dari kecintaan pada kopi Indonesia. Kami bekerja langsung dengan petani di Temanggung dan Jawa Barat untuk memastikan setiap biji dipilih dengan cermat, dipanggang segar, dan sampai ke tanganmu dalam kondisi terbaik.
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PRODUCTS -->
+  <section id="produk">
+    <div class="section-tag">— Shop Produk</div>
+
+    <div class="product-card reveal">
+      <div class="product-icon">
+        <img
+          src="robustatemanggung.webp"
+          alt="Robusta Temanggung"
+          width="60" height="60"
+          loading="lazy"
+          decoding="async"
+          style="width:100%;height:100%;object-fit:cover;"
+        />
+      </div>
+      <div class="product-info">
+        <div class="product-name">Robusta Temanggung</div>
+        <div class="product-detail">200g · Dark & Bold · Jawa Tengah</div>
+        <div class="product-price">IDR 45.000</div>
+        <div class="product-btns">
+          <a href="https://wa.me/6281234567890?text=Halo%20KopiProp!%20Saya%20mau%20pesan%20Robusta%20Temanggung%20200g" target="_blank" rel="noopener noreferrer" class="btn-wa">📱 WhatsApp</a>
+          <a href="https://lynk.id/kopiprop" target="_blank" rel="noopener noreferrer" class="btn-lynk">⚡ Lynk.id</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-icon">
+        <img
+          src="arabica darkroast.webp'"
+          alt="Arabica West Java"
+          width="60" height="60"
+          loading="lazy"
+          decoding="async"
+          style="width:100%;height:100%;object-fit:cover;"
+        />
+      </div>
+      <div class="product-info">
+        <div class="product-name">Arabica West Java</div>
+        <div class="product-detail">200g · Fruity & Bright · Jawa Barat</div>
+        <div class="product-price">IDR 55.000</div>
+        <div class="product-btns">
+          <a href="https://wa.me/6281234567890?text=Halo%20KopiProp!%20Saya%20mau%20pesan%20Arabica%20West%20Java%20200g" target="_blank" rel="noopener noreferrer" class="btn-wa">📱 WhatsApp</a>
+          <a href="https://lynk.id/kopiprop" target="_blank" rel="noopener noreferrer" class="btn-lynk">⚡ Lynk.id</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" style="border-bottom:none;">
+      <div class="product-icon">
+        <img
+          src="arabica darkroast.webp"
+          alt="Dark Roast West Java"
+          width="60" height="60"
+          loading="lazy"
+          decoding="async"
+          style="width:100%;height:100%;object-fit:cover;"
+        />
+      </div>
+      <div class="product-info">
+        <div class="product-name">Dark Roast West Java</div>
+        <div class="product-detail">200g · Smoky & Rich · Jawa Barat</div>
+        <div class="product-price">IDR 50.000</div>
+        <div class="product-btns">
+          <a href="https://wa.me/6281234567890?text=Halo%20KopiProp!%20Saya%20mau%20pesan%20Dark%20Roast%20West%20Java%20200g" target="_blank" rel="noopener noreferrer" class="btn-wa">📱 WhatsApp</a>
+          <a href="https://lynk.id/kopiprop" target="_blank" rel="noopener noreferrer" class="btn-lynk">⚡ Lynk.id</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <div class="feature-grid">
+    <div class="feature-item reveal">
+      <div class="feature-tag">Kualitas</div>
+      <div class="feature-title">Single Origin</div>
+      <p class="feature-desc">Traceable dari kebun ke cangkir</p>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-tag">Kesegaran</div>
+      <div class="feature-title">Fresh Roast</div>
+      <p class="feature-desc">Dipanggang setiap minggu</p>
+    </div>
+    <div class="feature-item reveal" style="border-bottom:none;">
+      <div class="feature-tag">Pengiriman</div>
+      <div class="feature-title">Free Ongkir</div>
+      <p class="feature-desc">Seluruh Indonesia</p>
+    </div>
+    <div class="feature-item reveal" style="border-bottom:none;">
+      <div class="feature-tag">Layanan</div>
+      <div class="feature-title">Respon Cepat</div>
+      <p class="feature-desc">Chat langsung, no ribet</p>
+    </div>
+  </div>
+
+  <!-- CTA SECONDARY -->
+  <section class="cta-section reveal">
+    <h2>Siap Nikmati<br>Kopiterbaik?</h2>
+    <p>Pesan sekarang — dikirim segar ke rumahmu.</p>
+    <div class="cta-btn-group">
+      <a href="https://wa.me/6281234567890?text=Halo%20KopiProp!%20Saya%20mau%20pesan%20kopi" target="_blank" rel="noopener noreferrer" class="btn-primary">☕ Pesan Sekarang via WA</a>
+      <a href="https://lynk.id/kopiprop" target="_blank" rel="noopener noreferrer" class="btn-outline">⚡ Beli Instan di Lynk.id</a>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="community reveal" id="komunitas">
+    <h2>Join Komunitas KopiProp</h2>
+    <p>Promo eksklusif, info kopi, dan diskusi bareng para pecinta kopi Indonesia. Gratis!</p>
+    <a href="https://t.me/kopiprop" target="_blank" rel="noopener noreferrer" class="btn-telegram">✈ Gabung Telegram Community</a>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <input type="email" placeholder="Email untuk promo & update terbaru" aria-label="Email address" />
+    <button type="button">Daftar</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Produk</h3>
+        <a href="#produk">Robusta Temanggung</a>
+        <a href="#produk">Arabica West Java</a>
+        <a href="#produk">Dark Roast West Java</a>
+      </div>
+      <div class="footer-col">
+        <h3>Temukan Kami</h3>
+        <a href="https://www.instagram.com/kopiprop" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://t.me/kopiprop" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://lynk.id/kopiprop" target="_blank" rel="noopener noreferrer">Lynk.id</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-wordmark">KOPIPROP</div>
+      <div class="footer-copy">© 2026 KopiProp · Kopi Lokal Pride .</div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // Newsletter basic feedback
+    document.querySelector('.newsletter button').addEventListener('click', function() {
+      const input = document.querySelector('.newsletter input');
+      if (input.value && input.value.includes('@')) {
+        input.value = '';
+        input.placeholder = '✓ Terima kasih sudah mendaftar!';
+        setTimeout(() => { input.placeholder = 'Email untuk promo & update terbaru'; }, 3000);
+      } else {
+        input.style.borderColor = '#c9922a';
+        input.focus();
+        setTimeout(() => { input.style.borderColor = ''; }, 1500);
+      }
+    });
+  </script>
+
+</body>
+</html>
